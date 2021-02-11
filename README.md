@@ -12,3 +12,4 @@ Libraries Used:
 -Kotlin Coroutines are best for multithreading and avoid those pesky ANR explosions.  
 -Timber for logging as you dont need TAGS  
 -Koin for DI as it the best option for small project projects. The creation of extras classes is diminished greatly.  
+![](finalgithub.mov)
