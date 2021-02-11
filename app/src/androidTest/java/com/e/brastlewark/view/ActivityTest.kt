@@ -1,4 +1,4 @@
-package com.e.brastlewark
+package com.e.brastlewark.view
 
 
 import android.view.View
@@ -11,7 +11,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
-import com.e.brastlewark.view.SplashActivity
+import com.e.brastlewark.R
 import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers.allOf
@@ -22,27 +22,27 @@ import org.junit.runner.RunWith
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
-class DetailsTest {
+class ActivityTest {
 
     @Rule
     @JvmField
     var mActivityTestRule = ActivityTestRule(SplashActivity::class.java)
 
     @Test
-    fun detailsTest() {
+    fun splashActivityTest() {
         val recyclerView = onView(
                 allOf(withId(R.id.recycler_character),
                         childAtPosition(
                                 withId(R.id.container),
                                 1)))
-        recyclerView.perform(actionOnItemAtPosition<ViewHolder>(0, click()))
+        recyclerView.perform(actionOnItemAtPosition<ViewHolder>(1, click()))
 
         val recyclerView2 = onView(
                 allOf(withId(R.id.recycler_character),
                         childAtPosition(
                                 withId(R.id.container),
                                 1)))
-        recyclerView2.perform(actionOnItemAtPosition<ViewHolder>(0, click()))
+        recyclerView2.perform(actionOnItemAtPosition<ViewHolder>(1, click()))
     }
 
     private fun childAtPosition(
