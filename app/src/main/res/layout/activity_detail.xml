@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearMain_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_Info"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp">
+
+
+            <TextView
+                android:id="@+id/heightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/weightText"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:layout_toEndOf="@+id/height"
+                android:layout_toRightOf="@+id/height"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/weightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/profession"
+                android:layout_marginStart="@dimen/w_margin_start"
+                android:layout_marginLeft="@dimen/w_margin_left"
+                android:layout_marginBottom="@dimen/w_margin_bottom"
+                android:layout_toEndOf="@+id/height"
+                android:layout_toRightOf="@+id/height"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/text_profession"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="78dp"
+                android:text="@string/height" />
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/text_profession"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/weight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profession"
+                android:layout_width="@dimen/p_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text_profession"
+                android:layout_marginStart="@dimen/p_margin_start"
+                android:layout_marginLeft="@dimen/p_margin_left"
+                android:layout_marginBottom="@dimen/p_margin_bottom"
+                android:layout_toEndOf="@+id/text_profession"
+                android:layout_toRightOf="@+id/text_profession"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:paddingTop="6dp"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/friends"
+                android:layout_width="@dimen/p_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text_profession"
+                android:layout_marginStart="06dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="-81dp"
+                android:layout_toEndOf="@+id/text_profession"
+                android:layout_toRightOf="@+id/text_profession"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:paddingTop="6dp"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1dp"
+                android:paddingTop="3dp"
+                android:text="@string/name"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profession"
+                android:layout_width="@dimen/p_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="90dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/professions"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_friends"
+                android:layout_width="@dimen/p_layout_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/friends"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/imageGnome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="84dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_comic"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="376dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="358dp"
+        android:layout_height="428dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_comic"
+        app:srcCompat="@drawable/brastlemap" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Height Dimensions -->
+    <dimen name="margin_start">18sp</dimen>
+    <dimen name="margin_left">18sp</dimen>
+    <dimen name="margin_bottom">35sp</dimen>
+
+    <!-- Weight Dimensions -->
+    <dimen name="w_margin_start">18sp</dimen>
+    <dimen name="w_margin_left">18sp</dimen>
+    <dimen name="w_margin_bottom">24sp</dimen>
+
+    <!-- <Professions Dimensions -->
+    <dimen name="p_margin_start">6sp</dimen>
+    <dimen name="p_margin_left">6sp</dimen>
+    <dimen name="p_margin_bottom">-21sp</dimen>
+    <dimen name="p_layout_width">72sp</dimen>
+</resources>

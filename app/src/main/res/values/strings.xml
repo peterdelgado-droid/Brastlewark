@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Brastlewark</string>
+    <string name="ERROR_UNEXPECTED">unexpected errorr</string>
+    <string name="ERROR_INTERNET_CONNECTION">connection error</string>
+    <string name="description">description</string>
+    <string name="professions">Professions:</string>
+    <string name="weight">Weight:</string>
+    <string name="height">Height:</string>
+    <string name="friends">Friends:</string>
+    <string name="name">name</string>
+    <string name="loading">Getting Inhabitants of Brastlewark</string>
+</resources>
