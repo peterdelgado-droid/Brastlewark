@@ -1,3 +1,14 @@
-# REST-call-with-Retrofit-and-Kotlin-Coroutines
-This project uses Retrofit and Kotlin to make the REST call. 
-It combines Clean Code and MVVM Architecture
+# Brastlewark Village Inhabitants
+This project uses Clean Code using SOLID principles.  
+S: Single Responsibility Principle  
+O: Open/Closed Principle  
+L: Liskov Substituion Principal  
+I: Interface Segragation Principal  
+D: Dependency Inversion Principal  
+
+Libraries Used:  
+-Retrofit for now this seems the best to consume an API but I have a feeling GraphQL will take its place.  
+-Glide for image rendering as it is the simplest to use.  
+-Kotlin Coroutines are best for multithreading and avoid those pesky ANR explosions.  
+-Timber for logging as you dont need TAGS  
+-Koin for DI as it the best option for small project projects. The creation of extras classes is diminished greatly.  
