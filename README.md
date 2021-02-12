@@ -12,3 +12,12 @@ Libraries Used:
 -Kotlin Coroutines are best for multithreading and avoid those pesky ANR explosions.  
 -Timber for logging as you dont need TAGS  
 -Koin for DI as it the best option for small project projects. The creation of extras classes is diminished greatly.  
+-Material Design for search view.   
+-JUNIT for unit testing.   
+-Espresso for automated testing.  
+-Firebase RoboTest.  
+
+![](finalgithub.mov)
+
+#EXPERIMENTAL:  
+Added Apollo Graphql to query repositories and create data classes.
