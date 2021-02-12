@@ -1,10 +1,17 @@
-query GetRepositories($count:Int!) {
- viewer {
-  name
-   repositories(last: $count) {
-     nodes {
-       name
-     }
-   }
- }
+query GithubRepositories(
+  $repositoriesCount: Int!
+  $orderBy: RepositoryOrderField!
+  $orderDirection: OrderDirection!
+) {
+  viewer {
+    repositories(
+      first: $repositoriesCount
+      orderBy: { field: $orderBy, direction: $orderDirection }
+      ownerAffiliations: [OWNER]
+    ) {
+      nodes {
+        ...RepositoryFragment
+      }
+    }
+  }
 }
