@@ -14,5 +14,5 @@ Libraries Used:
 -Koin for DI as it the best option for small project projects. The creation of extras classes is diminished greatly.  
 ![](finalgithub.mov)
 
-EXPERIMENTAL:  
-Added Appollo Graphql to query repositories and create data classes.
+#EXPERIMENTAL:  
+Added Apollo Graphql to query repositories and create data classes.
