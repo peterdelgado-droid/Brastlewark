@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.search, menu)
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
         searchView = menu?.findItem(R.id.action_search)?.actionView as SearchView
+        searchView.queryHint = "Find Gnomes"
         searchView.apply {
             setSearchableInfo(searchManager.getSearchableInfo(componentName))
             maxWidth = Int.MAX_VALUE

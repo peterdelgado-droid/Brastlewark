@@ -9,4 +9,6 @@
     <string name="friends">Friends:</string>
     <string name="name">name</string>
     <string name="loading">Getting Inhabitants of Brastlewark</string>
+    <string name="age">Age:</string>
+    <string name="hair">Hair:</string>
 </resources>

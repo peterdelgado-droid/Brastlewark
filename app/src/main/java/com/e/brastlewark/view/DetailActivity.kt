@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.model.GlideUrl
 import com.bumptech.glide.load.model.LazyHeaders
 import com.bumptech.glide.request.RequestOptions
 import com.e.brastlewark.R
 import com.e.brastlewark.domain.Brastlewark
-import com.e.brastlewark.utils.GlideApp
 import com.e.brastlewark.view.adapter.GnomeAdapter
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.gnome_list.*
@@ -71,8 +71,9 @@ class DetailActivity : AppCompatActivity() {
                 .addHeader("User-Agent",
                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit / 537.36(KHTML, like Gecko) Chrome  47.0.2526.106 Safari / 537.36")
                 .build())
-        GlideApp.with(this)
+        Glide.with(this)
                 .load(glideUrl)
+                .circleCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .apply(RequestOptions()
                         .placeholder(R.drawable.ic_launcher_background)
