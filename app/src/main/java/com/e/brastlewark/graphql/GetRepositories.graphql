@@ -1,17 +1,10 @@
-query GithubRepositories(
-  $repositoriesCount: Int!
-  $orderBy: RepositoryOrderField!
-  $orderDirection: OrderDirection!
-) {
-  viewer {
-    repositories(
-      first: $repositoriesCount
-      orderBy: { field: $orderBy, direction: $orderDirection }
-      ownerAffiliations: [OWNER]
-    ) {
-      nodes {
-        ...RepositoryFragment
-      }
+query LaunchDetails($id:ID!) {
+  launch(id: $id) {
+    id
+    site
+    mission {
+      name
+      missionPatch(size:LARGE)
     }
   }
 }
