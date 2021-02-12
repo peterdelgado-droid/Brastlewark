@@ -3,7 +3,11 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+    id "com.apollographql.apollo"
+}
 
+apollo {
+    generateKotlinModels.set(true)
 }
 
 android {
@@ -80,6 +84,12 @@ dependencies {
 
     //multidex
     implementation 'com.android.support:multidex:1.0.3'
+
+    //Apollo GraphQL
+    implementation "com.apollographql.apollo:apollo-runtime:2.4.6"
+    implementation "com.apollographql.apollo:apollo-coroutines-support:2.4.6"
+    implementation "com.apollographql.apollo:apollo-runtime:2.4.6"
+    implementation "com.apollographql.apollo:apollo-coroutines-support:2.4.6"
 
 
 
