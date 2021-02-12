@@ -14,7 +14,9 @@ Libraries Used:
 -Koin for DI as it the best option for small project projects. The creation of extras classes is diminished greatly.  
 -Material Design for search view.   
 -JUNIT for unit testing.   
--Espresso for automated testing.   
+-Espresso for automated testing.
+-Firebase RoboTest.  
+
 ![](finalgithub.mov)
 
 #EXPERIMENTAL:  
