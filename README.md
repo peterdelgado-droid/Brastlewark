@@ -13,3 +13,6 @@ Libraries Used:
 -Timber for logging as you dont need TAGS  
 -Koin for DI as it the best option for small project projects. The creation of extras classes is diminished greatly.  
 ![](finalgithub.mov)
+
+EXPERIMENTAL:  
+Added Appollo Graphql to query repositories and create data classes.
