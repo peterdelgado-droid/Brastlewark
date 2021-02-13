@@ -42,4 +42,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading_gnome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_dark_background"
+        android:foregroundGravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/gnome" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

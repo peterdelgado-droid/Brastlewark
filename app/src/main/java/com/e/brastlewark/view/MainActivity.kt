@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.lottie.LottieAnimationView
 import com.e.brastlewark.R
 import com.e.brastlewark.data.listener.CharacterListener
 import com.e.brastlewark.domain.Brastlewark
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var  mAdapter : GnomeAdapter
     lateinit var searchView: SearchView
     lateinit var townsList: ArrayList<Brastlewark>
+    private lateinit var gnomeAnimationLoader: LottieAnimationView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,17 +39,19 @@ class MainActivity : AppCompatActivity() {
         })
 
         val recycler = findViewById<RecyclerView>(R.id.recycler_character)
+        gnomeAnimationLoader = findViewById(R.id.loading_gnome)
+
         recycler.layoutManager = GridLayoutManager(this,1)
         recycler.adapter = mAdapter
 
         mListener = getListener(recycler)
         mListener.let {
             recycler.addOnScrollListener(it)
+
         }
         mViewModel.characters.observe(this, {
-         mAdapter.updateList(it.brastlewark.toMutableList())
+            mAdapter.updateList(it.brastlewark.toMutableList())
             Toast.makeText(this@MainActivity, "Double-click on pic of Gnome to Zoom In!", Toast.LENGTH_LONG).show()
-
             progress_bar.visibility = View.INVISIBLE
             text_progress.visibility = View.INVISIBLE
         })
@@ -83,6 +87,7 @@ class MainActivity : AppCompatActivity() {
     private fun getListener(recycler: RecyclerView): CharacterListener {
         return object : CharacterListener() {
             override fun onListClick(character: Brastlewark) {
+                gnomeAnimationLoader.visibility = View.VISIBLE
                 val intent = Intent(applicationContext, DetailActivity::class.java)
                 val bundle = Bundle()
                 bundle.putString("name", character.name)
@@ -101,6 +106,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         mAdapter.attachListener(mListener)
         mViewModel.list()
+        gnomeAnimationLoader.visibility = View.INVISIBLE
     }
 
 }
