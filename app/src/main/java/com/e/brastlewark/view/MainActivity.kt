@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         }
         mViewModel.characters.observe(this, {
          mAdapter.updateList(it.brastlewark.toMutableList())
-            Toast.makeText(this@MainActivity, "Double-click on pic of Gnome to Enlarge!!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, "Double-click on pic of Gnome to Zoom In!", Toast.LENGTH_LONG).show()
 
             progress_bar.visibility = View.INVISIBLE
             text_progress.visibility = View.INVISIBLE
