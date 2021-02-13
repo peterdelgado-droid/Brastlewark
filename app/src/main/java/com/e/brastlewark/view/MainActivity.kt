@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.View
 import android.widget.SearchView
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -45,6 +46,8 @@ class MainActivity : AppCompatActivity() {
         }
         mViewModel.characters.observe(this, {
          mAdapter.updateList(it.brastlewark.toMutableList())
+            Toast.makeText(this@MainActivity, "Double-click on pic of Gnome to Enlarge!!", Toast.LENGTH_LONG).show()
+
             progress_bar.visibility = View.INVISIBLE
             text_progress.visibility = View.INVISIBLE
         })

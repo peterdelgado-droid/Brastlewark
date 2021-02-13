@@ -14,6 +14,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.e.brastlewark.R
 import com.e.brastlewark.data.listener.CharacterListener
 import com.e.brastlewark.domain.Brastlewark
+import com.github.chrisbanes.photoview.PhotoView
+
 
 
 
@@ -22,15 +24,19 @@ class CharacterViewHolder(val context: Context, itemView: View, contactListFilte
 
     private var mTextName: TextView = itemView.findViewById(R.id.text_name)
     private var mTextAge: TextView = itemView.findViewById(R.id.age)
-    private var mImage: ImageView = itemView.findViewById(R.id.image)
+    private var mImage: PhotoView = itemView.findViewById(R.id.image)
     private var mHairColor: TextView = itemView.findViewById(R.id.hairColor)
 
+
+   
 
     @SuppressLint("CheckResult")
     fun bindData(character: Brastlewark) {
         this.mTextName.text = character.name
         this.mTextAge.text = character.age.toString()
         this.mHairColor.text = character.hair_color
+
+        mImage.isZoomable
 
         val glideUrl = GlideUrl(character.thumbnail, LazyHeaders.Builder()
                 .addHeader("User-Agent",

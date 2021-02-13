@@ -37,8 +37,8 @@
 
 
     <!-- <Image Dimensions -->
-    <dimen name="layout_width">90sp</dimen>
-    <dimen name="layout_height">80sp</dimen>
+    <dimen name="layout_width">100sp</dimen>
+    <dimen name="layout_height">100sp</dimen>
 
 
 </resources>
