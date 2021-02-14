@@ -11,6 +11,7 @@ import android.widget.SearchView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
 import com.e.brastlewark.R
@@ -40,21 +41,14 @@ class MainActivity : AppCompatActivity() {
 
         val recycler = findViewById<RecyclerView>(R.id.recycler_character)
         gnomeAnimationLoader = findViewById(R.id.loading_gnome)
-
         recycler.layoutManager = GridLayoutManager(this,1)
         recycler.adapter = mAdapter
 
         mListener = getListener(recycler)
         mListener.let {
             recycler.addOnScrollListener(it)
-
         }
-        mViewModel.characters.observe(this, {
-            mAdapter.updateList(it.brastlewark.toMutableList())
-            Toast.makeText(this@MainActivity, "Double-click on pic of Gnome to Zoom In!", Toast.LENGTH_LONG).show()
-            progress_bar.visibility = View.INVISIBLE
-            text_progress.visibility = View.INVISIBLE
-        })
+        setGnomeList()
     }
 
 
@@ -109,4 +103,13 @@ class MainActivity : AppCompatActivity() {
         gnomeAnimationLoader.visibility = View.INVISIBLE
     }
 
+
+    private fun setGnomeList() {
+        mViewModel.characters.observe(this, {
+            mAdapter.updateList(it.brastlewark.toMutableList())
+            Toast.makeText(this@MainActivity, "Double-click on pic of Gnome to Zoom In!", Toast.LENGTH_LONG).show()
+            progress_bar.visibility = View.INVISIBLE
+            text_progress.visibility = View.INVISIBLE
+        })
+    }
 }

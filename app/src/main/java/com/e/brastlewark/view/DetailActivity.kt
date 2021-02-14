@@ -12,8 +12,10 @@ import com.bumptech.glide.request.RequestOptions
 import com.e.brastlewark.R
 import com.e.brastlewark.domain.Brastlewark
 import com.e.brastlewark.view.adapter.GnomeAdapter
+import com.github.chrisbanes.photoview.PhotoView
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.gnome_list.*
+import kotlinx.android.synthetic.main.gnome_list.view.*
 
 class DetailActivity : AppCompatActivity() {
 

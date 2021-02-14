@@ -15,12 +15,11 @@ import java.util.*
 @RunWith(MockitoJUnitRunner::class)
 class GnomeApiServiceTest {
 
-    private val testSubject = ApiService
 
     @Test
     @Throws(Exception::class)
     fun getList() {
-        Assert.assertNotNull(getList())
+        testHttpInterceptor()
         }
 }
 
