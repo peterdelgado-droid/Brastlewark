@@ -16,7 +16,9 @@ Libraries Used:
 -JUNIT for unit testing.   
 -Espresso for automated testing.  
 -Firebase RoboTest.  
-
+-Lottie Animation.  
+-PhotoView Zoom
+  
 ![](finalgithub.mov)
 
 #EXPERIMENTAL:  
